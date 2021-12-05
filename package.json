@@ -1,0 +1,17 @@
+{
+	"name": "@sing4u/paypal",
+	"version": "0.1.0",
+	"main": "index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imlautaro/paypal-js.git"
+	},
+	"bugs": "https://github.com/imlautaro/paypal-js/issues",
+	"dependencies": {
+		"axios": "^0.24.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
