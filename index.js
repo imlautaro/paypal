@@ -39,6 +39,19 @@ class PayPal {
 		)
 		return result.data
 	}
+	async captureOrder(orderId) {
+		const accessToken = await this.getAccessToken()
+		const result = await axios.post(
+			`${this.api}/v2/checkout/orders/${orderId}/capture`,
+			{},
+			{
+				headers: {
+					Authorization: `Bearer ${accessToken}`,
+				},
+			}
+		)
+		return result.data
+	}
 	async verifyWebhookSignature({ body, headers }, webhookId) {
 		const accessToken = await this.getAccessToken()
 		const result = await axios.post(
